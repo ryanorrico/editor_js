@@ -24,8 +24,9 @@ module EditorJs
 
         # content_tag :blockquote, class: css_name do
         content_tag :blockquote do
-          html_str = content_tag :blockquote, text
+          html_str =  text
           # html_str = content_tag :div, text, class: "#{css_name}__text"
+          html_str << content_tag(:figcaption, caption) if caption
           # html_str << content_tag(:div, caption, class: "#{css_name}__caption") if caption
           html_str
         end
