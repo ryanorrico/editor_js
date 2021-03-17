@@ -35,7 +35,8 @@ module EditorJs
             css_name("__#{alignment}")
           ].join(' ')
         end
-        content_tag(:"h#{data['level']}", data['text'].html_safe, class: class_name_str)
+        # content_tag(:"h#{data['level']}", data['text'].html_safe, class: class_name_str)
+        content_tag(:"h#{data['level']}", data['text'].html_safe)
       end
 
       def sanitize!

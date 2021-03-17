@@ -21,7 +21,8 @@ module EditorJs
 
       def render(_options = {})
         tag = data['style'] == 'unordered' ? :ul : :ol
-        content_tag(tag, class: css_name) do
+        # content_tag(tag, class: css_name) do
+        content_tag(tag) do
           children_tag_string = ''
           data['items'].each do |v|
             children_tag_string += content_tag(:li, v.html_safe)

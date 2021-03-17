@@ -22,9 +22,10 @@ module EditorJs
         text = data['text'].html_safe
         caption = data['caption'].presence&.html_safe
 
-        content_tag :div, class: css_name do
-          html_str = content_tag :div, text, class: "#{css_name}__text"
-          html_str << content_tag(:div, caption, class: "#{css_name}__caption") if caption
+        content_tag :blockquote, class: css_name do
+          html_str = content_tag :blockquote, text
+          # html_str = content_tag :div, text, class: "#{css_name}__text"
+          # html_str << content_tag(:div, caption, class: "#{css_name}__caption") if caption
           html_str
         end
       end
